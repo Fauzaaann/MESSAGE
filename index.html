@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection Established</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0b0c10;
+            color: #e2d4cf;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+        .container {
+            background-color: #121214;
+            border: 1px solid #b76e79;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 550px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(183, 110, 121, 0.15);
+            text-align: center;
+            position: relative;
+        }
+        .terminal-header {
+            color: #b76e79;
+            font-family: monospace;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #232326;
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+        h1 {
+            color: #b76e79;
+            font-size: 26px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .paragraph-container {
+            min-height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #e2d4cf;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+        p.active {
+            display: block;
+            opacity: 1;
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+        button {
+            background-color: transparent;
+            border: 1px solid #b76e79;
+            color: #b76e79;
+            padding: 12px 28px;
+            font-size: 14px;
+            border-radius: 25px;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+        button:hover {
+            background-color: #b76e79;
+            color: #0b0c10;
+            box-shadow: 0 0 15px rgba(183, 110, 121, 0.4);
+        }
+        .heart-icon {
+            color: #b76e79;
+            font-size: 35px;
+            margin-top: 20px;
+            display: none;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+        .progress-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .dot {
+            width: 6px;
+            height: 6px;
+            background-color: #232326;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+        .dot.active {
+            background-color: #b76e79;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="terminal-header" id="terminal-status">❯ CONNECTION: ACTIVE</div>
+        <h1>For Shabiya</h1>
+        
+        <div class="progress-dots" id="dots-container"></div>
+
+        <div class="paragraph-container">
+            <p class="active">My Dearest Shabiya,<br><br>I am writing this very long message for you because a simple text message is just too small. It cannot hold all the love I have for you in my heart. I wanted to put my feelings here, in a safe place, so you can read it anytime you miss me. No matter how many miles are between us right now, and no matter how many hours of time difference we have, you are the only person who rules my mind. Every single day starts with your name and every single night ends with your thoughts. I wake up thinking about you, and I go to sleep dreaming about you.</p>
+            <p>You are my wife, Shabiya. This is the biggest truth of my life. It is a promise for forever, and absolutely nothing in this whole world can ever change it. People can change, the weather can change, and the world can change, but my love for you will never change. You are mine and you are only mine. Nobody can ever take your place in my life, and nobody can ever love you the way I do. Having you as my wife is the biggest gift I have ever received. I am so proud to call you my wife every single second, even when we are far apart.</p>
+            <p>You are a true blessing from Allah to me. He made you just for me, and He gave me the best partner in the universe. You are my soulmate, my best friend, my caretaker, and my sweet baby. You care for me so much, and you understand me like nobody else can. I want to tell you today that I will stay by your side not just in this world, but till Akhirah. My love for you does not end with death. I pray to Allah that we are together forever, and I honestly do not want to enter Paradise without your hand in my hand. Paradise would not be complete for me if you are not there right beside me.</p>
+            <p>I want you to know this from the bottom of your heart: you are the love of my life and you are my actual life line. There is no life for me without you. I honestly cannot live without you, Shabiya. Without your voice, without your sweet words, and without your love, my world is totally dark and empty. You are the reason why I smile. You are my home, you are my peace, and you are my biggest happiness. When the distance feels too hard and the days feel too long, I just close my eyes and think of your beautiful smile. That gives me all the strength to keep going. You mean the whole world to me. There is nothing more important than you, and nothing comes before you.</p>
+            <p>I promise you today, with all my heart and soul, that I will protect you at any cost. I will protect your heart from sadness, I will protect your smile from fading, and I will protect our beautiful love from any problem. Even though I am far away right now, my heart is always standing next to you like a shield. I will always defend you, support you, and stand by you. You are my most precious treasure, and I will spend all my life making sure that you feel safe, happy, and deeply loved by me every single day.</p>
+            <p>I know that this long distance is very hard for both of us. It hurts to not see you every day, and it hurts to not hold your hand. But please remember that this distance is only temporary. It is just for some time, but our love is for eternity. Our love is stronger than any distance and any ocean. You are my forever, you are my final destination, and you are the best thing that ever happened to me in my whole life.</p>
+            <p>I love you so much, Shabiya. I love you more than words can say, more than anyone can measure, and more than time itself. I can never live without you. Please always remember that you belong to me, and I belong completely to you. We are one team, one heart, and one soul forever, from this world to the next.</p>
+        </div>
+
+        <div class="progress-dots">
+            <div class="heart-icon" id="heart">❤️</div>
+        </div>
+
+        <div class="btn-container">
+            <button id="next-btn" onclick="nextParagraph()">Read More</button>
+        </div>
+    </div>
+
+    <script>
+        const paragraphs = document.querySelectorAll('.paragraph-container p');
+        const dotsContainer = document.getElementById('dots-container');
+        const nextBtn = document.getElementById('next-btn');
+        const heartIcon = document.getElementById('heart');
+        const statusText = document.getElementById('terminal-status');
+        let currentIndex = 0;
+
+        // Create navigation dots dynamically
+        paragraphs.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function nextParagraph() {
+            // Fade out current paragraph smoothly
+            paragraphs[currentIndex].style.opacity = '0';
+            dots[currentIndex].classList.remove('active');
+            
+            setTimeout(() => {
+                paragraphs[currentIndex].classList.remove('active');
+                currentIndex++;
+                
+                if (currentIndex < paragraphs.length) {
+                    // Show next paragraph
+                    paragraphs[currentIndex].classList.add('active');
+                    setTimeout(() => {
+                        paragraphs[currentIndex].style.opacity = '1';
+                    }, 50);
+                    
+                    dots[currentIndex].classList.add('active');
+                    
+                    if (currentIndex === paragraphs.length - 1) {
+                        nextBtn.innerHTML = "Finish Message";
+                    }
+                } else {
+                    // Sequence Complete
+                    statusText.innerHTML = "❯ STATUS: FOREVER YOURS";
+                    dotsContainer.style.display = 'none';
+                    heartIcon.style.display = 'block';
+                    nextBtn.style.display = 'none';
+                }
+            }, 800); // Matches the fade out duration
+        }
+        
+        window.onload = () => {
+            setTimeout(() => {
+                paragraphs[0].style.opacity = '1';
+            }, 100);
+        };
+    </script>
+</body>
+</html>
